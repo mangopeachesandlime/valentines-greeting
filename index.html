@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Our Love Story</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <style type="text/css">
+      @font-face {
+        font-family: digit;
+        src: url('digital.ttf') format('truetype');
+      }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+  </head>
+
+  <body>
+    <div id="mainDiv">
+      <div id="content">
+        <div id="code">
+          <span class="comments">##</span><br />
+          <span class="comments"># I am a programmer,</span><br />
+          <span class="comments"
+            ># So I'm going to write a code to celebrate Valentine's Day.</span
+          ><br />
+          <span class="comments">##</span><br />
+          i = Boy(<span class="string">"Jan Rian Angelo F. Asuncion"</span
+          >);<br />
+          u = Girl(<span class="string">"Ashreign Jade S. Ayao"</span>);<br />
+          we = Boy+Girl(<span class="string"
+            >"Jan Rian Angelo F. Asuncion" + "Ashreign Jade S. Ayao"</span
+          >);<br />
+          <span class="comments"># December 08, 2022, I chatted you. </span
+          ><br />
+          i.chat(u)<br />
+          <span class="comments"
+            ># Afterwards, we first met on December 20, 2022. Then celebrated my
+            birthday the next day.</span
+          ><br />
+          i.meet(u)<br />
+          <span class="comments"
+            ># After 6 days, I asked you to be my girlfriend.</span
+          ><br />
+          i.confessed(u)<br />
+          <span class="comments"
+            ># But we officially got together on February 11, 2023</span
+          ><br />
+          u.acceptec(i)<br />
+          <span class="comments"
+            ># Since you've arrived, life has been so much better.</span
+          ><br />
+		  u.lifebetter(i)<br />
+          <span class="comments"># We enjoy watching anime together.</span
+          ><br />
+          watchanime(u,i)<br />
+          <span class="comments"
+            ># We bring each other to our favorite restaurants so we can enjoy
+            our favorites together.</span
+          ><br />
+          eat(u,i)<br />
+          <span class="comments"
+            ># We do chores together so it's not as "kapoy" when you're doing it
+            alone.</span
+          ><br />
+          chores(u,i)<br />
+          <span class="comments"
+            ># We try and cook different dishes we see on tiktok/instagram
+            together.</span
+          ><br />
+          cook(u,i)<br />
+          <span class="comments"
+            ># We do mini get-away vacations to relax together and take
+            beautiful pictures.</span
+          ><br />
+          vacation(u,i)<br />
+          <span class="comments"
+            ># We spoil each other in our love languages.</span
+          ><br />
+          spoil(u,i)<br />
+          <span class="comments"
+            ># But our relationship wasn't always perfect like many
+            relationships are.</span
+          ><br />
+          while <span class="keyword">True</span>:<br />
+          <span class="placeholder"></span
+          ><span class="keyword">if</span> u.conflict(i):<br />
+          <span class="placeholder"></span><span class="placeholder"></span>u =
+          angry<br />
+          <span class="placeholder"></span><span class="placeholder"></span>i =
+          sorry<br />
+          <span class="placeholder"></span><span class="placeholder"></span>we =
+          fix<br />
+          <span class="placeholder"></span
+          ><span class="keyword">else</span>:<br />
+          <span class="placeholder"></span><span class="placeholder"></span>i =
+          angry<br />
+          <span class="placeholder"></span><span class="placeholder"></span>i =
+          sorry<br />
+          <span class="placeholder"></span><span class="placeholder"></span>we =
+          fix<br />
+          conflict(u, i, sometimes=<span class="keyword">True</span>)<br />
+          <span class="comments"
+            ># We stayed patient, we grew, and we understood that disagreements
+            do happen.</span
+          ><br />
+          relationshipsaved(u,i)<br />
+          <span class="comments"
+            ># As our relationship grew we found peace and harmony in each
+            other.</span
+          ><br />
+          u.in_harmony_with(i) <br />
+          i.in_harmony_with(u) <br />
+          <span class="comments"># Love, I just wanted to say that.</span><br />
+          <span class="comments"
+            ># You've not only brought the sun with you but illuminated every
+            corner of my world.</span
+          ><br />
+          u.makehappy.i<br />
+          <span class="comments"
+            ># I'm very grateful for the warmth and joy you bring into my
+            life.</span
+          ><br />
+          <span class="comments"># I love you so much, my pokemon.</span><br />
+          i.marry(u, in_the_future=<span class="keyword">True</span>)<br />
+          we.live_happily_forever_together<br />
+        </div>
+        <div id="loveHeart">
+          <canvas id="garden"></canvas>
+          <div id="words">
+            <div id="messages">
+              Pokemon, I have fallen in love with you for
+              <div id="elapseClock"></div>
+            </div>
+            <div id="loveu">
+              I love you forever and ever.<br />
+              <div class="signature">- Rockets</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        <a href="http://cuiqingcai.com"></a>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var offsetX = $('#loveHeart').width() / 2;
+      var offsetY = $('#loveHeart').height() / 2 - 55;
+      var together = new Date();
+      together.setFullYear(2022, 11, 27);
+      together.setHours(0);
+      together.setMinutes(0);
+      together.setSeconds(0);
+      together.setMilliseconds(0);
+
+      if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement('div');
+        msg.id = 'errorMsg';
+        msg.innerHTML =
+          "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $('#code').css('display', 'none');
+        $('#copyright').css('position', 'absolute');
+        $('#copyright').css('bottom', '10px');
+        document.execCommand('stop');
+      } else {
+        setTimeout(function () {
+          startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+          timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $('#code').typewriter();
+      }
+    </script>
+  </body>
+</html>
